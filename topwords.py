@@ -55,6 +55,7 @@ for word_file_name in WORDS_FILE_NAMES:
     # Tally up the words, using the word as the key, e.g., if "foo" occured 100
     # times, it would look like "foo":100 in the tally dict
     tally = {}
+    
     for line in words_file:
         word = line.strip()
         try:
@@ -114,12 +115,17 @@ if DEBUG:
     print "Displaying results...\n"
     
 line = ""
+
 for i,category in enumerate(sorted_tally_categories):
+    
     if TOP_HOW_MANY and i > TOP_HOW_MANY - 1:
         break
     
     line += "{tally}: ".format(tally=category[0])
+    
     for word in category[1]:
         line += "{word} ".format(word=word)
+    
     line += '\n'
+    
 print line
