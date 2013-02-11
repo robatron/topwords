@@ -39,6 +39,7 @@ if DEBUG:
     print "Debug mode ON (Set DEBUG -> False to squelch progress output)"
     print "Finding top words.."
 
+
 # Read in words and tally
 # -----------------------
 # For every words list file, record each word and the frequency it occurs
@@ -103,6 +104,7 @@ sorted_tally_categories = sorted(
     # Sort decending instead of acending
     reverse=True
 )
+
 
 # Fortmat and print
 # -----------------
